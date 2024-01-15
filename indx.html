@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triba</title>
+    <link rel="icon" type="image/x-icon" href="img/triba.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styls.css">
+
+</head>
+<body>
+    <div class="ImeIgraca">
+        <p class="Ime" ></p>
+    </div>
+
+    <svg class="svg"></svg>
+
+    <div class="pozadina">
+    </div>
+
+    <div class="sat">
+        <h2 class="broj">3</h2>
+    </div>
+
+    <div class="kraj">
+
+        <h2 style="color: white;" id="pobjednik"></h2>
+        <button id="back3">BACK</button>
+        <button id="again">PLAY AGAIN</button>
+    </div>
+    
+    <div class="pocetna">
+        <div><button id="NewGame">NEW GAME</button></div>
+        <div><button id="Help">HELP</button></div>
+        <div><button id="More">MORE</button></div>
+    </div>
+
+    <div class="PocetnaNew ">
+        <div>
+            <button id="bt_m1"><img src="img/mapa1.png" alt=""><br>9 X 10</button>
+            <button id="bt_m2"><img src="img/mapa2.png" alt=""><br>7 X 7</button>
+        </div>
+        <div>
+            <button id="bt_m3"><img src="img/mapa3.png" alt=""><br>4 X 6</button>
+            <button id="bt_m4"><img src="img/upitnik.png" alt=""><br>9 X 10</button>
+        </div>
+        <label>Player 1:</label><br>
+        <input type="text" id="Player1" placeholder="Player 1" ><br>
+        <label>Player 2:</label><br>
+        <input type="text" id="Player2"  placeholder="Player 2"><br><br>
+        <button id="back">BACK</button>
+        <button id="start">START</button>
+
+
+    </div>
+
+    <div class="PocetnaHelp">
+        <p> 
+            Dva igrača igraju
+            naizmjenično. Svaki igrač u svom potezu bira trougao tako što izabere tri tačke iz mreže koje ne
+            leže na istoj pravoj. Trouglovi se ne smiju sjeći, te ne smiju dva trougla imati zajednički vrh.
+            Trouglovi se mogu nalaziti jedan unutar drugog. Igra je završena kada jedan igrač ostane bez
+            poteza. Igrač koji je ostao bez poteza gubi.
+        </p>
+        <button id="back1">BACK</button>
+
+    </div>
+
+    <div class="PocetnaMore">
+
+        <p style="color: white;">Predmet: Web programiranje <br>
+            Profesor: Sead Delalic <br>
+            Asistent: Iman Bekkaye <br>
+            Fakultet: PMF <br>
+            Studij: IT strucni studu <br>
+            Naziv projekta: Triba (igrica) <br>
+            <br>
+            Podaci o autoru: <br>
+            Ime i prezime: Abdullah Husomanović <br>
+            G-mail : <a target="_blank" href="mailto:husomanovic2017@gmail.com">husomanovic2017@gmail.com</a> <br>
+            Broj: <a target="_blank" href="tel:+38762539232">+38762539232</a>
+            
+
+        </p>
+
+
+
+        <button id="back2">BACK</button>
+    </div>
+
+
+    <!-- <canvas id="myCanvas" width="100%" height="100%"> -->
+        <div class="box mapa1 ">
+            <div>
+                <button type="button" id="b00" class="b"></button>
+                <button type="button" id="b01" class="b"></button>
+                <button type="button" id="b02" class="b"></button>
+                <button type="button" id="b03" class="b"></button>
+                <button type="button" id="b04" class="b"></button>
+                <button type="button" id="b05" class="b"></button>
+                <button type="button" id="b06" class="b"></button>
+                <button type="button" id="b07" class="b"></button>
+                <button type="button" id="b08" class="b"></button>
+                <button type="button" id="b09" class="b"></button>
+            </div>
+            <div>
+                <button type="button" id="b10" class="b"></button>
+                <button type="button" id="b11" class="b"></button>
+                <button type="button" id="b12" class="b"></button>
+                <button type="button" id="b13" class="b"></button>
+                <button type="button" id="b14" class="b"></button>
+                <button type="button" id="b15" class="b"></button>
+                <button type="button" id="b16" class="b"></button>
+                <button type="button" id="b17" class="b"></button>
+                <button type="button" id="b18" class="b"></button>
+                <button type="button" id="b19" class="b"></button>
+            </div>
+            <div>
+                <button type="button" id="b20" class="b"></button>
+                <button type="button" id="b21" class="b"></button>
+                <button type="button" id="b22" class="b"></button>
+                <button type="button" id="b23" class="b"></button>
+                <button type="button" id="b24" class="b"></button>
+                <button type="button" id="b25" class="b"></button>
+                <button type="button" id="b26" class="b"></button>
+                <button type="button" id="b27" class="b"></button>
+                <button type="button" id="b28" class="b"></button>
+                <button type="button" id="b29" class="b"></button>
+            </div>
+            <div>
+                <button type="button" id="b30" class="b"></button>
+                <button type="button" id="b31" class="b"></button>
+                <button type="button" id="b32" class="b"></button>
+                <button type="button" id="b33" class="b"></button>
+                <button type="button" id="b34" class="b"></button>
+                <button type="button" id="b35" class="b"></button>
+                <button type="button" id="b36" class="b"></button>
+                <button type="button" id="b37" class="b"></button>
+                <button type="button" id="b38" class="b"></button>
+                <button type="button" id="b39" class="b"></button>
+            </div>
+            <div>
+                <button type="button" id="b40" class="b"></button>
+                <button type="button" id="b41" class="b"></button>
+                <button type="button" id="b42" class="b"></button>
+                <button type="button" id="b43" class="b"></button>
+                <button type="button" id="b44" class="b"></button>
+                <button type="button" id="b45" class="b"></button>
+                <button type="button" id="b46" class="b"></button>
+                <button type="button" id="b47" class="b"></button>
+                <button type="button" id="b48" class="b"></button>
+                <button type="button" id="b49" class="b"></button>
+            </div>
+            <div>
+                <button type="button" id="b50" class="b"></button>
+                <button type="button" id="b51" class="b"></button>
+                <button type="button" id="b52" class="b"></button>
+                <button type="button" id="b53" class="b"></button>
+                <button type="button" id="b54" class="b"></button>
+                <button type="button" id="b55" class="b"></button>
+                <button type="button" id="b56" class="b"></button>
+                <button type="button" id="b57" class="b"></button>
+                <button type="button" id="b58" class="b"></button>
+                <button type="button" id="b59" class="b"></button>
+            </div>
+            <div>
+                <button type="button" id="b60" class="b"></button>
+                <button type="button" id="b61" class="b"></button>
+                <button type="button" id="b62" class="b"></button>
+                <button type="button" id="b63" class="b"></button>
+                <button type="button" id="b64" class="b"></button>
+                <button type="button" id="b65" class="b"></button>
+                <button type="button" id="b66" class="b"></button>
+                <button type="button" id="b67" class="b"></button>
+                <button type="button" id="b68" class="b"></button>
+                <button type="button" id="b69" class="b"></button>
+            </div>
+        <div>
+                <button type="button" id="b70" class="b"></button>
+                <button type="button" id="b71" class="b"></button>
+                <button type="button" id="b72" class="b"></button>
+                <button type="button" id="b73" class="b"></button>
+                <button type="button" id="b74" class="b"></button>
+                <button type="button" id="b75" class="b"></button>
+                <button type="button" id="b76" class="b"></button>
+                <button type="button" id="b77" class="b"></button>
+                <button type="button" id="b78" class="b"></button>
+                <button type="button" id="b79" class="b"></button>
+            </div>
+            <div>
+                <button type="button" id="b80" class="b"></button>
+                <button type="button" id="b81" class="b"></button>
+                <button type="button" id="b82" class="b"></button>
+                <button type="button" id="b83" class="b"></button>
+                <button type="button" id="b84" class="b"></button>
+                <button type="button" id="b85" class="b"></button>
+                <button type="button" id="b86" class="b"></button>
+                <button type="button" id="b87" class="b"></button>
+                <button type="button" id="b88" class="b"></button>
+                <button type="button" id="b89" class="b"></button>
+            </div>
+        </div>
+
+        <div class="box mapa2">
+            <div>
+                <button type="button" id="b00" class="b"></button>
+                <button type="button" id="b01" class="b"></button>
+                <button type="button" id="b02" class="b"></button>
+                <button type="button" id="b03" class="b"></button>
+                <button type="button" id="b04" class="b"></button>
+                <button type="button" id="b05" class="b"></button>
+                <button type="button" id="b06" class="b"></button>
+            </div>
+            <div>
+                <button type="button" id="b10" class="b"></button>
+                <button type="button" id="b11" class="b"></button>
+                <button type="button" id="b12" class="b"></button>
+                <button type="button" id="b13" class="b"></button>
+                <button type="button" id="b14" class="b"></button>
+                <button type="button" id="b15" class="b"></button>
+                <button type="button" id="b16" class="b"></button>
+            </div>
+            <div>
+                <button type="button" id="b20" class="b"></button>
+                <button type="button" id="b21" class="b"></button>
+                <button type="button" id="b22" class="b"></button>
+                <button type="button" id="b23" class="b"></button>
+                <button type="button" id="b24" class="b"></button>
+                <button type="button" id="b25" class="b"></button>
+                <button type="button" id="b26" class="b"></button>
+            </div>
+            <div>
+                <button type="button" id="b30" class="b"></button>
+                <button type="button" id="b31" class="b"></button>
+                <button type="button" id="b32" class="b"></button>
+                <button type="button" id="b33" class="b"></button>
+                <button type="button" id="b34" class="b"></button>
+                <button type="button" id="b35" class="b"></button>
+                <button type="button" id="b36" class="b"></button>
+            </div>
+            <div>
+                <button type="button" id="b40" class="b"></button>
+                <button type="button" id="b41" class="b"></button>
+                <button type="button" id="b42" class="b"></button>
+                <button type="button" id="b43" class="b"></button>
+                <button type="button" id="b44" class="b"></button>
+                <button type="button" id="b45" class="b"></button>
+                <button type="button" id="b46" class="b"></button>
+            </div>
+            <div>
+                <button type="button" id="b50" class="b"></button>
+                <button type="button" id="b51" class="b"></button>
+                <button type="button" id="b52" class="b"></button>
+                <button type="button" id="b53" class="b"></button>
+                <button type="button" id="b54" class="b"></button>
+                <button type="button" id="b55" class="b"></button>
+                <button type="button" id="b56" class="b"></button>
+            </div>
+            <div>
+                <button type="button" id="b60" class="b"></button>
+                <button type="button" id="b61" class="b"></button>
+                <button type="button" id="b62" class="b"></button>
+                <button type="button" id="b63" class="b"></button>
+                <button type="button" id="b64" class="b"></button>
+                <button type="button" id="b65" class="b"></button>
+                <button type="button" id="b66" class="b"></button>
+            </div>
+        </div>
+
+        <div class="box mapa3 ">
+            <div>
+                <button type="button" id="b00" class="b"></button>
+                <button type="button" id="b01" class="b"></button>
+                <button type="button" id="b02" class="b"></button>
+                <button type="button" id="b03" class="b"></button>
+                <button type="button" id="b04" class="b"></button>
+                <button type="button" id="b05" class="b"></button>
+            </div>
+            <div>
+                <button type="button" id="b10" class="b"></button>
+                <button type="button" id="b11" class="b"></button>
+                <button type="button" id="b12" class="b"></button>
+                <button type="button" id="b13" class="b"></button>
+                <button type="button" id="b14" class="b"></button>
+                <button type="button" id="b15" class="b"></button>
+            </div>
+            <div>
+                <button type="button" id="b20" class="b"></button>
+                <button type="button" id="b21" class="b"></button>
+                <button type="button" id="b22" class="b"></button>
+                <button type="button" id="b23" class="b"></button>
+                <button type="button" id="b24" class="b"></button>
+                <button type="button" id="b25" class="b"></button>
+            </div>
+            <div>
+                <button type="button" id="b30" class="b"></button>
+                <button type="button" id="b31" class="b"></button>
+                <button type="button" id="b32" class="b"></button>
+                <button type="button" id="b33" class="b"></button>
+                <button type="button" id="b34" class="b"></button>
+                <button type="button" id="b35" class="b"></button>
+            </div>
+        </div>
+
+        <div class="box mapa4 ">
+            <div>
+                <button type="button" id="b00" class="b"></button>
+                <button type="button" id="b01" class="b"></button>
+                <button type="button" id="b02" class="b"></button>
+                <button type="button" id="b03" class="b"></button>
+                <button type="button" id="b04" class="b"></button>
+                <button type="button" id="b05" class="b"></button>
+                <button type="button" id="b06" class="b"></button>
+                <button type="button" id="b07" class="b"></button>
+                <button type="button" id="b08" class="b"></button>
+                <button type="button" id="b09" class="b"></button>
+            </div>
+            <div>
+                <button type="button" id="b10" class="b"></button>
+                <button type="button" id="b11" class="b"></button>
+                <button type="button" id="b12" class="b"></button>
+                <button type="button" id="b13" class="b"></button>
+                <button type="button" id="b14" class="b"></button>
+                <button type="button" id="b15" class="b"></button>
+                <button type="button" id="b16" class="b"></button>
+                <button type="button" id="b17" class="b"></button>
+                <button type="button" id="b18" class="b"></button>
+                <button type="button" id="b19" class="b"></button>
+            </div>
+            <div>
+                <button type="button" id="b20" class="b"></button>
+                <button type="button" id="b21" class="b"></button>
+                <button type="button" id="b22" class="b"></button>
+                <button type="button" id="b23" class="b"></button>
+                <button type="button" id="b24" class="b"></button>
+                <button type="button" id="b25" class="b"></button>
+                <button type="button" id="b26" class="b"></button>
+                <button type="button" id="b27" class="b"></button>
+                <button type="button" id="b28" class="b"></button>
+                <button type="button" id="b29" class="b"></button>
+            </div>
+            <div>
+                <button type="button" id="b30" class="b"></button>
+                <button type="button" id="b31" class="b"></button>
+                <button type="button" id="b32" class="b"></button>
+                <button type="button" id="b33" class="b"></button>
+                <button type="button" id="b34" class="b"></button>
+                <button type="button" id="b35" class="b"></button>
+                <button type="button" id="b36" class="b"></button>
+                <button type="button" id="b37" class="b"></button>
+                <button type="button" id="b38" class="b"></button>
+                <button type="button" id="b39" class="b"></button>
+            </div>
+            <div>
+                <button type="button" id="b40" class="b"></button>
+                <button type="button" id="b41" class="b"></button>
+                <button type="button" id="b42" class="b"></button>
+                <button type="button" id="b43" class="b"></button>
+                <button type="button" id="b44" class="b"></button>
+                <button type="button" id="b45" class="b"></button>
+                <button type="button" id="b46" class="b"></button>
+                <button type="button" id="b47" class="b"></button>
+                <button type="button" id="b48" class="b"></button>
+                <button type="button" id="b49" class="b"></button>
+            </div>
+            <div>
+                <button type="button" id="b50" class="b"></button>
+                <button type="button" id="b51" class="b"></button>
+                <button type="button" id="b52" class="b"></button>
+                <button type="button" id="b53" class="b"></button>
+                <button type="button" id="b54" class="b"></button>
+                <button type="button" id="b55" class="b"></button>
+                <button type="button" id="b56" class="b"></button>
+                <button type="button" id="b57" class="b"></button>
+                <button type="button" id="b58" class="b"></button>
+                <button type="button" id="b59" class="b"></button>
+            </div>
+            <div>
+                <button type="button" id="b60" class="b"></button>
+                <button type="button" id="b61" class="b"></button>
+                <button type="button" id="b62" class="b"></button>
+                <button type="button" id="b63" class="b"></button>
+                <button type="button" id="b64" class="b"></button>
+                <button type="button" id="b65" class="b"></button>
+                <button type="button" id="b66" class="b"></button>
+                <button type="button" id="b67" class="b"></button>
+                <button type="button" id="b68" class="b"></button>
+                <button type="button" id="b69" class="b"></button>
+            </div>
+        <div>
+                <button type="button" id="b70" class="b"></button>
+                <button type="button" id="b71" class="b"></button>
+                <button type="button" id="b72" class="b"></button>
+                <button type="button" id="b73" class="b"></button>
+                <button type="button" id="b74" class="b"></button>
+                <button type="button" id="b75" class="b"></button>
+                <button type="button" id="b76" class="b"></button>
+                <button type="button" id="b77" class="b"></button>
+                <button type="button" id="b78" class="b"></button>
+                <button type="button" id="b79" class="b"></button>
+            </div>
+            <div>
+                <button type="button" id="b80" class="b"></button>
+                <button type="button" id="b81" class="b"></button>
+                <button type="button" id="b82" class="b"></button>
+                <button type="button" id="b83" class="b"></button>
+                <button type="button" id="b84" class="b"></button>
+                <button type="button" id="b85" class="b"></button>
+                <button type="button" id="b86" class="b"></button>
+                <button type="button" id="b87" class="b"></button>
+                <button type="button" id="b88" class="b"></button>
+                <button type="button" id="b89" class="b"></button>
+            </div>
+        </div>
+    </canvas>
+
+</body>
+<script src="app.js"></script>
+</html>
